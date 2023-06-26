@@ -5,7 +5,9 @@ const Header = () => {
     <header className="header center">
       <div className="container around">
         <div className="brand">
-          <h1 className="text-3xl uppercase px-8 py-4 font-bold">Flex Fit</h1>
+          <a href="/">
+            <h1 className="text-3xl uppercase px-8 py-4 font-bold">Flex Fit</h1>
+          </a>
         </div>
         <nav>
           <div className="container">
@@ -39,7 +41,9 @@ const Header = () => {
           </div>
         </nav>
         <div className="header-btn">
-          <button className="joinus-btn uppercase px-8 py-4">Join us</button>
+          <button className="joinus-btn uppercase px-8 py-4 rounded">
+            Join us
+          </button>
         </div>
       </div>
     </header>
