@@ -1,0 +1,18 @@
+.header{
+    height: 75px;
+    background-color: black;
+}
+
+.brand{
+    color: #ff4500;
+}
+
+.navlink{
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.header-btn .joinus-btn{
+    background-color: #ff4500;
+    color: #ffffff;
+}
