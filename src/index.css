@@ -12,6 +12,25 @@ body {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar{
+  background-color: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar-button{
+  display: none;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: orangered;
+}
+
+body::-webkit-scrollbar-track{
+  background-color: rgb(253, 253, 253);
+}
+
+
+
+
 .container {
   width: 80%;
   margin: 1rem 0;

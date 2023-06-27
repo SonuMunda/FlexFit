@@ -223,14 +223,29 @@ const Home = () => {
 
       <div
         className="details-line p-5"
-        style={{ backgroundColor: "rgb(34, 36, 41)" }}
+        style={{ backgroundColor: "rgb(34, 36, 41)", padding: "4rem 2rem" }}
       >
-        <p style={{ color: "orangered", padding:"4rem 2rem" }} className=" text-2xl text-center">
-          Please note that specific details, pricing, and additional perks may
-          vary. For complete membership information and to explore our offerings
-          in more detail, we encourage you to contact our gym reception or visit
-          our Gym Center.
+        <p
+          style={{ color: "orangered" }}
+          className=" text-2xl text-center uppercase p-5"
+        >
+          <span className="text-white text-4xl">&ldquo; </span>Please note that
+          specific details, pricing, and additional perks may vary. For complete
+          membership information and to explore our offerings in more detail, we
+          encourage you to contact our gym reception or visit our Gym Center.
+          <span className="text-white text-4xl"> &rdquo;</span>
         </p>
+
+        <div className="contact-btn-container center">
+          <Link>
+            <button
+              className="px-8 py-4 text-white rounded"
+              style={{ backgroundColor: "orangered" }}
+            >
+              Contact us
+            </button>
+          </Link>
+        </div>
       </div>
 
       {/*Memberships Section*/}
