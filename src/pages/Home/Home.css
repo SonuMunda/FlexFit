@@ -1,8 +1,6 @@
-.about .container {
-  width: 80%;
-  margin: 1rem 0;
+.about{
+  padding: 2rem 0;
 }
-
 .about-row .about-col {
   margin: 10px;
   padding: 1rem;
@@ -18,14 +16,116 @@
 
 /* Services */
 
-.services .container {
-  width: 80%;
-  margin: 1rem 0;
-}
-
 .services-row .services-col {
-  width: 320px;
+  height: 380px;
+  width: 360px;
   background-color: rgb(220, 220, 220);
   margin: 1rem;
   padding: 1rem;
+  border-radius: 8px;
+}
+
+.services-col .col-icon img {
+  display: block;
+  margin: auto;
+  height: 120px;
+  padding: 0.5rem;
+}
+
+.services-col .col-heading h1 {
+  font-weight: bolder;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.services-col .col-text p {
+  text-align: center;
+}
+
+.services-col .col-link a {
+  color: orangered;
+}
+
+.membrshp-row .membrshp-col {
+  height: 320px;
+  width: 300px;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 6px;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0px 0px 10px rgb(77, 77, 77);
+  transition: all 0.4s ease-in;
+}
+
+.memberships .container .heading {
+  margin-bottom: 2rem;
+}
+
+.membrshp-col .membrshp-title h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.membrshp-col span {
+  text-align: center;
+  width: 100%;
+  color: rgb(255, 255, 255);
+}
+
+/* Team section */
+
+.team{
+  padding: 2rem 0;
+}
+
+
+.team-row .team-col {
+  position: relative;
+  width: 345px;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.team-col .team-img img {
+  width: 100%;
+  transition: all 0.4s ease-in;
+}
+
+.team-col:hover > .team-overlay {
+  scale: 1;
+}
+
+.team-col:hover > .team-img img {
+  scale: 1.2;
+}
+
+.team-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  scale: 0;
+  transition: all 0.4s ease-in-out;
+  background-color: rgba(50, 50, 50, 0.6);
+}
+
+.team-handles .handle-icon {
+  margin: 10px;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.team-col .team-desc {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 16px;
+  background-color: rgba(50, 50, 50, 0.6);
+  background-blend-mode: darken;
 }

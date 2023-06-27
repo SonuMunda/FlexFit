@@ -9,6 +9,12 @@
 }
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 80%;
+  margin: 1rem 0;
 }
 
 .center{
