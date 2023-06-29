@@ -5,21 +5,29 @@ import About from "./pages/About/About";
 import Classes from "./pages/Classes/Classes";
 import Trainers from "./pages/Trainers/Trainers";
 import Contact from "./pages/Contact/Contact";
-import Footer from "./assets/components/Footer/Footer"
+import ServicesCard from "./assets/components/ServicesCard/ServicesCard";
+import TeamCard from "./assets/components/TeamCard/TeamCard";
+import Footer from "./assets/components/Footer/Footer";
 function App() {
   return (
     <>
       <Router>
-      <Header/>
+        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route
+            path="/"
+            element={<Home ServicesCard={ServicesCard} TeamCard={TeamCard} />}
+          />
+          <Route
+            path="/about"
+            element={<About ServicesCard={ServicesCard} TeamCard={TeamCard} />}
+          />
           <Route path="/classes" element={<Classes />} />
           <Route path="/trainers" element={<Trainers />} />
           <Route path="/contact" element={<Contact />} />
           {/*<Route path="*" element={<ErrorPage/>} />*/}
         </Routes>
-        <Footer/>
+        <Footer />
       </Router>
     </>
   );

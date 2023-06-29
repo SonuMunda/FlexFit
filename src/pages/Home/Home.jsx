@@ -1,15 +1,9 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
-import torso_img from "/images/torso.png";
-import musclebuilding_img from "/images/bodybuilding.png";
-import barbell_img from "/images/barbell.png";
 import about_img from "/images/about-bodybuilder-image.jpg";
-import team_1_img from "/images/team-1.jpg";
-import team_2_img from "/images/team-2.jpg";
-import team_3_img from "/images/team-3.jpg";
 import HomeCarousel from "../../assets/components/HomeCarousel/HomeCarousel";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-const Home = () => {
+
+const Home = (props) => {
   return (
     <>
       <section className="home-carousel">
@@ -87,60 +81,7 @@ const Home = () => {
               Fitness Offerings
             </h1>
           </div>
-
-          <div className="services-row center flex-wrap my-3">
-            <div className="services-col around flex-col">
-              <div className="col-icon">
-                <img src={torso_img} alt="bodybuilding" />
-              </div>
-              <div className="col-heading">
-                <h1>Body Building</h1>
-              </div>
-              <div className="col-text">
-                <p className="text-slate-700">
-                  Sculpt your physique, build muscle, and achieve your fitness
-                  goals with our specialized program.
-                </p>
-              </div>
-              <div className="col-link">
-                <Link to="/">Read More &#8811;</Link>
-              </div>
-            </div>
-            <div className="services-col around flex-col">
-              <div className="col-icon">
-                <img src={barbell_img} alt="barbell" />
-              </div>
-              <div className="col-heading">
-                <h1>Weight Lifting </h1>
-              </div>
-              <div className="col-text">
-                <p className="text-slate-700">
-                  Increase strength, power, and performance through our dynamic
-                  training program.
-                </p>
-              </div>
-              <div className="col-link">
-                <Link to="/">Read More &#8811; </Link>
-              </div>
-            </div>
-            <div className="services-col around flex-col">
-              <div className="col-icon">
-                <img src={musclebuilding_img} alt="musclebuilding" />
-              </div>
-              <div className="col-heading">
-                <h1>Muscle Building</h1>
-              </div>
-              <div className="col-text">
-                <p className="text-slate-700">
-                  Maximize muscle growth, enhance definition, and transform your
-                  physique with our comprehensive program.
-                </p>
-              </div>
-              <div className="col-link">
-                <Link to="/">Read More &#8811; </Link>
-              </div>
-            </div>
-          </div>
+          <props.ServicesCard />
         </div>
       </section>
 
@@ -264,119 +205,8 @@ const Home = () => {
               Expert Trainers
             </h1>
           </div>
-          <div className="team-row around flex-wrap">
-            <div className="team-col">
-              <div className="team-img">
-                <img src={team_1_img} alt="Kuldeep Singh" />
-              </div>
-
-              <div className="team-overlay center">
-                <div className="team-handles flex">
-                  <div className="handle-icon">
-                    <Link to="/">
-                      <FaFacebook />
-                    </Link>
-                  </div>
-                  <div className="handle-icon">
-                    <Link to="/">
-                      <FaInstagram />
-                    </Link>
-                  </div>
-                  <div className="handle-icon">
-                    <Link to="/">
-                      <FaTwitter />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="team-desc">
-                <div className="team-name">
-                  <h1 className="font-bold text-3xl text-white text-center uppercase">
-                    Kuldeep Singh
-                  </h1>
-                </div>
-                <div className="team-post">
-                  <h4 className="text-2xl uppercase center text-white">
-                    Trainer
-                  </h4>
-                </div>
-              </div>
-            </div>
-            <div className="team-col">
-              <div className="team-img">
-                <img src={team_2_img} alt="Anushk Gorak" />
-              </div>
-
-              <div className="team-overlay center">
-                <div className="team-handles flex">
-                  <div className="handle-icon">
-                    <Link to="/">
-                      <FaFacebook />
-                    </Link>
-                  </div>
-                  <div className="handle-icon">
-                    <Link to="/">
-                      <FaInstagram />
-                    </Link>
-                  </div>
-                  <div className="handle-icon">
-                    <Link to="/">
-                      <FaTwitter />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="team-desc">
-                <div className="team-name">
-                  <h1 className="font-bold text-3xl text-white text-center uppercase">
-                    Anushk Gorak
-                  </h1>
-                </div>
-                <div className="team-post">
-                  <h4 className="text-2xl uppercase center text-white">
-                    Trainer
-                  </h4>
-                </div>
-              </div>
-            </div>
-            <div className="team-col">
-              <div className="team-img">
-                <img src={team_3_img} alt="Mahesh Dubey" />
-              </div>
-              <div className="team-overlay center">
-                <div className="team-handles flex">
-                  <div className="handle-icon">
-                    <Link to="/">
-                      <FaFacebook />
-                    </Link>
-                  </div>
-                  <div className="handle-icon">
-                    <Link to="/">
-                      <FaInstagram />
-                    </Link>
-                  </div>
-                  <div className="handle-icon">
-                    <Link to="/">
-                      <FaTwitter />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="team-desc">
-                <div className="team-name">
-                  <h1 className="font-bold text-3xl text-white text-center uppercase">
-                    Mahesh Dubey
-                  </h1>
-                </div>
-                <div className="team-post">
-                  <h4 className="text-2xl uppercase center text-white">
-                    Trainer
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/*Team Cards*/}
+          <props.TeamCard />
         </div>
       </section>
     </>
