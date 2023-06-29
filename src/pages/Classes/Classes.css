@@ -1,0 +1,37 @@
+.classes-banner::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8) url(../images/classes-banner-bg.jpg);
+  background-blend-mode: darken;
+  z-index: -1;
+}
+
+.weekbar {
+  background-color: rgb(42, 36, 41);
+  padding: 15px;
+}
+
+.week-list > .list-item {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.week-list > .list-item:hover,
+.week-list > .list-item.active {
+  background-color: orangered;
+}
+
+.class-col{
+    height: 240px;
+    width: 320px;
+    background-color: rgb(42, 36, 41);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem;
+    transition: all 1s ease-in-out;
+}
+
