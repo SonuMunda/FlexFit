@@ -11,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="footer center">
+    <footer className="footer center flex-col">
       <div className=".container p-4">
         <div className="footer-row flex flex-wrap">
           <div className="footer-col">
@@ -143,6 +143,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="copy-rght w-full bg-slate-950">
+        <p className="p-5 text-white text-center">&copy; flexfitgym.com | All Rights Reserved.</p>
       </div>
     </footer>
   );

@@ -12,46 +12,61 @@ body {
   scroll-behavior: smooth;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   background-color: rgb(255, 255, 255);
 }
 
-body::-webkit-scrollbar-button{
+body::-webkit-scrollbar-button {
   display: none;
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background-color: orangered;
 }
 
-body::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track {
   background-color: rgb(253, 253, 253);
 }
 
-
-
+/* Custom Classes */
 
 .container {
-  width: 80%;
+  width: 95%;
   margin: 1rem 0;
 }
 
-.center{
+.center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.around{
+.around {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.between{
+.between {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* Classes for banners */
+.banner {
+  height: 75vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-heading h1{
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+}
 
