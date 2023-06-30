@@ -23,7 +23,7 @@ function App() {
             element={<About ServicesCard={ServicesCard} TeamCard={TeamCard} />}
           />
           <Route path="/classes" element={<Classes />} />
-          <Route path="/trainers" element={<Trainers />} />
+          <Route path="/trainers" element={<Trainers TeamCard={TeamCard} />} />
           <Route path="/contact" element={<Contact />} />
           {/*<Route path="*" element={<ErrorPage/>} />*/}
         </Routes>

@@ -37,7 +37,7 @@ const Classes = () => {
           <nav className="weekbar rounded mb-5">
             <ul className="week-list center flex-wrap">
               <li
-                className={`list-item mx-1 my-2${
+                className={`list-item mx-1 ${
                   selectedDay === "Monday" ? "active" : ""
                 }`}
                 onClick={() => handleDayClick("Monday")}
@@ -99,15 +99,27 @@ const Classes = () => {
             <div className="time-table center flex-wrap">
               {ClassesList.find((day) => day.day === selectedDay)?.classes.map(
                 (classInfo) => (
-                  <div className= "class-col center flex-col" key={classInfo.name}>
+                  <div
+                    className="class-col center flex-col"
+                    key={classInfo.name}
+                  >
                     <div className="class-timings">
-                      <p className="text-white uppercase font-bold">{classInfo.time}</p>
+                      <p className="text-white uppercase font-bold">
+                        {classInfo.time}
+                      </p>
                     </div>
                     <div className="class-name">
-                      <h3 className="font-bold uppercase text-2xl p-3" style={{color:"orangered"}}>{classInfo.name}</h3>
+                      <h3
+                        className="font-bold uppercase text-2xl p-3"
+                        style={{ color: "orangered" }}
+                      >
+                        {classInfo.name}
+                      </h3>
                     </div>
                     <div className="class-instructor">
-                      <p className="text-white uppercase">{classInfo.instructor}</p>
+                      <p className="text-white uppercase">
+                        {classInfo.instructor}
+                      </p>
                     </div>
                   </div>
                 )
