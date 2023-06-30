@@ -13,7 +13,7 @@ const Home = (props) => {
       {/*About Section*/}
       <section className="about center">
         <div className="container">
-          <div className="about-row flex">
+          <div className="about-row center">
             <div className="about-col" id="img-col">
               <div className="col-img">
                 <img src={about_img} className="rounded" alt="bodybuilder" />
@@ -75,7 +75,7 @@ const Home = (props) => {
         <div className="container">
           <div className="heading center mb-5">
             <h1
-              className="text-4xl uppercase font-bold p-3"
+              className="text-4xl uppercase font-bold py-2 text-center"
               style={{ color: "orangered" }}
             >
               Fitness Offerings
@@ -168,16 +168,15 @@ const Home = (props) => {
       >
         <p
           style={{ color: "orangered" }}
-          className=" text-2xl text-center uppercase p-5"
+          className=" text-2xl text-left p-2"
         >
-          <span className="text-white text-4xl">&ldquo; </span>Please note that
-          specific details, pricing, and additional perks may vary. For complete
-          membership information and to explore our offerings in more detail, we
-          encourage you to contact our gym reception or visit our Gym Center.
-          <span className="text-white text-4xl"> &rdquo;</span>
+          Please note that specific details, pricing, and additional perks may
+          vary. For complete membership information and to explore our offerings
+          in more detail, we encourage you to contact our gym reception or visit
+          our Gym Center.
         </p>
 
-        <div className="contact-btn-container center">
+        <div className="contact-btn-container center mt-3">
           <Link>
             <button
               className="px-8 py-4 text-white rounded"

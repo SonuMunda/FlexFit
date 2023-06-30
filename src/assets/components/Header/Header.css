@@ -56,7 +56,6 @@
     width: 100%;
     overflow: hidden;
     background-color: rgb(32, 33, 36);
-    border-radius: 0px 0px 20px 20px;
     box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.089);
   }
   .nav-active {
@@ -74,12 +73,26 @@
 
   .navlink {
     width: 100%;
-    margin: 1px 0;
+    margin: 1px 0 !important;
   }
 
   .navlink:hover,
-.navlink.active {
-  border-left: 2px solid #ff4500;
-  border-right: 2px solid #ff4500;
+  .navlink.active {
+    border-left: 2px solid #ff4500;
+    border-right: 2px solid #ff4500;
+  }
 }
+
+@media screen and (max-width: 412px) {
+  .menubar {
+    font-size: 1rem;
+  }
+  .brand a h1 {
+    font-size: 1rem;
+  }
+
+  .header-btn button{
+    font-size: 10px;
+    padding: 10px;
+  }
 }

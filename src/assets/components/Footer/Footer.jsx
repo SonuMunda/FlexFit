@@ -12,8 +12,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="footer center flex-col">
-      <div className=".container p-4">
-        <div className="footer-row flex flex-wrap">
+      <div className=".container py-4">
+        <div className="footer-row center flex-wrap">
           <div className="footer-col">
             <div className="heading">
               <h4>Get In Touch</h4>

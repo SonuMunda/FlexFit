@@ -12,12 +12,12 @@ const HomeCarousel = () => {
         <img src={carousel_img_1} />
         <div className="slide-content">
           <h3 className="text-2xl font-bold text-white">Best Gym Center</h3>
-          <p className="text-6xl font-black text-white my-5">
-            Get Flex Fit and Power Your Potential
+          <p className=" font-black text-white">
+            Power Your Potential with Flex Fit 
           </p>
-          <div className="button-row my-5">
-            <button className="px-8 py-4 rounded text-white orng-btn">Join us</button>
-            <button className="px-8 py-4 rounded bg-white">Contact us</button>
+          <div className="button-row mt-2">
+            <button className="carousel-btn rounded text-white orng-btn">Join us</button>
+            <button className="carousel-btn rounded bg-white">Contact us</button>
           </div>
         </div>
       </div>
@@ -25,12 +25,12 @@ const HomeCarousel = () => {
         <img src={carousel_img_2} />
         <div className="slide-content">
           <h3 className="text-2xl font-bold text-white">Best Gym Center</h3>
-          <p className="text-6xl font-black text-white my-5">
+          <p className=" font-black text-white">
             Achieve Your Best with Flex Fit
           </p>
-          <div className="button-row my-5">
-            <button className="px-8 py-4 rounded text-white orng-btn">Join us</button>
-            <button className="px-8 py-4 rounded bg-white">Contact us</button>
+          <div className="button-row mt-2">
+            <button className="carousel-btn rounded text-white orng-btn">Join us</button>
+            <button className="carousel-btn rounded bg-white">Contact us</button>
           </div>
         </div>
       </div>
@@ -38,12 +38,12 @@ const HomeCarousel = () => {
         <img src={carousel_img_3} />
         <div className="slide-content">
           <h3 className="text-2xl font-bold text-white">Best Gym Center</h3>
-          <p className="text-6xl font-black text-white my-5">
+          <p className=" font-black text-white">
             Empower Yourself with Flex Fit
           </p>
-          <div className="button-row my-5">
-            <button className="px-8 py-4 rounded text-white orng-btn">Join us</button>
-            <button className="px-8 py-4 rounded bg-white">Contact us</button>
+          <div className="button-row mt-2">
+            <button className="carousel-btn rounded text-white orng-btn">Join us</button>
+            <button className="carousel-btn rounded bg-white">Contact us</button>
           </div>
         </div>
       </div>
