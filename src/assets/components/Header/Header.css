@@ -1,23 +1,85 @@
-.header{
-    height: 75px;
-    background-color: rgb(30, 30, 30);
+.header {
+  height: 75px;
+  background-color: rgb(32, 33, 36);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.menubar {
+  padding: 10px;
+  color: #ff4500;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: 1px solid orangered;
+  border-radius: 8px;
+  display: none;
+  cursor: pointer;
+}
+.navbar {
+  transition: all 0.4s ease-in-out;
+}
+.brand {
+  color: #ff4500;
+}
+
+.navlink {
+  display: block;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.navlink:hover,
+.navlink.active {
+  color: #ff4500;
+  font-weight: bold;
+}
+
+.header-btn .joinus-btn {
+  background-color: #ff4500;
+  color: #ffffff;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 1024px) {
+  .menubar {
+    display: block;
+  }
+  .navbar {
     position: fixed;
-    top: 0;
+    top: 76px;
     left: 0;
+    height: 0%;
     width: 100%;
-    z-index: 9999;
-}
+    overflow: hidden;
+    background-color: rgb(32, 33, 36);
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.089);
+  }
+  .nav-active {
+    height: 50%;
+  }
+  .navlist {
+    width: 100%;
+    flex-direction: column;
+  }
 
-.brand{
-    color: #ff4500;
-}
+  .navlist .list-item {
+    text-align: center;
+    width: 100%;
+  }
 
-.navlink{
-    color: #ffffff;
-    text-transform: uppercase;
-}
+  .navlink {
+    width: 100%;
+    margin: 1px 0;
+  }
 
-.header-btn .joinus-btn{
-    background-color: #ff4500;
-    color: #ffffff;
+  .navlink:hover,
+.navlink.active {
+  border-left: 2px solid #ff4500;
+  border-right: 2px solid #ff4500;
+}
 }
