@@ -144,7 +144,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="copy-rght w-full bg-slate-950">
+      <div className="copy-rght w-full bg-zinc-950">
         <p className="p-5 text-white text-center">&copy; flexfitgym.com | All Rights Reserved.</p>
       </div>
     </footer>
