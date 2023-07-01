@@ -2,8 +2,12 @@ import "./Header.css";
 import { FaBars } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+
 const Header = () => {
+  // State variable to keep track of the navigation active state
   const [navActive, setNavActive] = useState(false);
+
+  // Function to toggle the navbar/sidebar
   const toggleNav = () => {
     if (navActive === false) {
       setNavActive(true);
@@ -12,15 +16,19 @@ const Header = () => {
     }
   };
 
+  // Function to scroll to the top of the page
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
+
   return (
     <header className="header center">
       <div className="container around">
+        {/* Button to toggle the navbar/sidebar */}
         <div className="menubar" onClick={toggleNav}>
           <FaBars />
         </div>
+        {/* Brand/logo */}
         <div className="brand">
           <NavLink to="/">
             <h1 className="text-3xl uppercase px-8 py-4 font-bold text-center">
@@ -28,9 +36,11 @@ const Header = () => {
             </h1>
           </NavLink>
         </div>
+        {/* Navigation */}
         <nav className={`navbar center ${navActive ? "nav-active" : ""}`}>
           <div className="container center">
             <ul className="navlist center">
+              {/* Navigation links */}
               <li
                 className="list-item"
                 onClick={() => {
@@ -89,6 +99,7 @@ const Header = () => {
             </ul>
           </div>
         </nav>
+        {/* Button for joining */}
         <div className="header-btn">
           <button className="joinus-btn uppercase px-8 py-4 rounded">
             Join us
