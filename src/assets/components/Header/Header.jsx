@@ -101,9 +101,11 @@ const Header = () => {
         </nav>
         {/* Button for joining */}
         <div className="header-btn">
-          <button className="joinus-btn uppercase px-8 py-4 rounded">
-            Join us
-          </button>
+          <NavLink to="/register">
+            <button className="joinus-btn uppercase px-8 py-4 rounded" onClick={scrollToTop}>
+              Join us
+            </button>
+          </NavLink>
         </div>
       </div>
     </header>

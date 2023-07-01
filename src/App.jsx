@@ -8,6 +8,7 @@ import Contact from "./pages/Contact/Contact";
 import ServicesCard from "./assets/components/ServicesCard/ServicesCard";
 import TeamCard from "./assets/components/TeamCard/TeamCard";
 import Footer from "./assets/components/Footer/Footer";
+import Register from "./pages/Register/Register";
 function App() {
   return (
     <>
@@ -25,7 +26,9 @@ function App() {
           <Route path="/classes" element={<Classes />} />
           <Route path="/trainers" element={<Trainers TeamCard={TeamCard} />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/register" element={<Register />} />
           {/*<Route path="*" element={<ErrorPage/>} />*/}
+
         </Routes>
         <Footer />
       </Router>
