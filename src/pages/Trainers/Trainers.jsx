@@ -3,6 +3,7 @@ import "./Trainers.css";
 const Trainers = (props) => {
   return (
     <div className="trainers-wrapper">
+      {/* Banner Section */}
       <section className="trainers-banner banner">
         <div className="container center">
           <div className="banner-heading">
@@ -10,7 +11,7 @@ const Trainers = (props) => {
           </div>
         </div>
       </section>
-      {/*Memberships Section*/}
+      {/* Memberships Section */}
       <section className="team center">
         <div className="container">
           <div className="heading">
@@ -26,7 +27,7 @@ const Trainers = (props) => {
               Expert Trainers
             </h1>
           </div>
-          {/*Team Cards*/}
+          {/* Team Cards */}
           <props.TeamCard />
         </div>
       </section>

@@ -1,14 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* Reset Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Body Styles */
 body {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -63,10 +67,9 @@ body::-webkit-scrollbar-track {
   justify-content: center;
 }
 
-.banner-heading h1{
+.banner-heading h1 {
   font-size: 3.5rem;
   font-weight: bold;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
 }
-

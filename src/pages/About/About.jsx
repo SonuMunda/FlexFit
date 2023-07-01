@@ -85,7 +85,7 @@ const About = (props) => {
         <div className="container">
           <div className="heading center mb-5">
             <h1
-              className="text-4xl uppercase font-bold p-3"
+              className="text-4xl uppercase font-bold text-center"
               style={{ color: "orangered" }}
             >
               Fitness Offerings
@@ -108,7 +108,7 @@ const About = (props) => {
             </h1>
           </div>
           <div className="sub-heading p-2 mb-5">
-            <h1 className="uppercase center text-4xl font-bold">
+            <h1 className="uppercase text-center text-4xl font-bold">
               Expert Trainers
             </h1>
           </div>

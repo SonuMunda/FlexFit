@@ -10,7 +10,7 @@ const Home = (props) => {
         <HomeCarousel />
       </section>
 
-      {/*About Section*/}
+      {/* About Section */}
       <section className="about center">
         <div className="container">
           <div className="about-row center">
@@ -41,11 +41,11 @@ const Home = (props) => {
 
                 <div className="sublines">
                   <p className="py-2">
-                    We understand that everyone&apos;s fitness goals and
+                    We understand that everyone &apos;s fitness goals and
                     aspirations are unique, which is why we offer a wide range
                     of workout programs, state-of-the-art equipment, and expert
-                    trainers to cater to your individual needs. Whether
-                    you&apos;re a beginner looking to kickstart your fitness
+                    trainers to cater to your individual needs. Whether you
+                    &apos;re a beginner looking to kickstart your fitness
                     routine or an experienced athlete aiming to take your
                     performance to the next level, we have something for
                     everyone.
@@ -67,13 +67,13 @@ const Home = (props) => {
         </div>
       </section>
 
-      {/*Services Section*/}
+      {/* Services Section */}
       <section
         className="services center py-5"
         style={{ backgroundColor: "rgb(34,36,41)" }}
       >
         <div className="container">
-          <div className="heading center mb-5">
+          <div className="heading center mb-5" id="services-heading">
             <h1
               className="text-4xl uppercase font-bold py-2 text-center"
               style={{ color: "orangered" }}
@@ -85,7 +85,7 @@ const Home = (props) => {
         </div>
       </section>
 
-      {/*Memberships Section*/}
+      {/* Memberships Section */}
 
       <section className="memberships center">
         <div className="container py-5">
@@ -98,7 +98,10 @@ const Home = (props) => {
             </h1>
           </div>
           <div className="membrshp-row center flex-wrap my-5">
-            <div className="membrshp-col around flex-col">
+            <div
+              className="membrshp-col around flex-col
+            "
+            >
               <div className="membrshp-title">
                 <h3>Basic Membership</h3>
               </div>
@@ -166,10 +169,7 @@ const Home = (props) => {
         className="details-line p-5"
         style={{ backgroundColor: "rgb(34, 36, 41)", padding: "4rem 2rem" }}
       >
-        <p
-          style={{ color: "orangered" }}
-          className=" text-2xl text-left p-2"
-        >
+        <p style={{ color: "orangered" }} className=" text-2xl text-left p-2">
           Please note that specific details, pricing, and additional perks may
           vary. For complete membership information and to explore our offerings
           in more detail, we encourage you to contact our gym reception or visit
@@ -188,7 +188,7 @@ const Home = (props) => {
         </div>
       </div>
 
-      {/*Memberships Section*/}
+      {/* Team Section */}
       <section className="team center">
         <div className="container">
           <div className="heading">
@@ -204,7 +204,7 @@ const Home = (props) => {
               Expert Trainers
             </h1>
           </div>
-          {/*Team Cards*/}
+          {/* Team Cards */}
           <props.TeamCard />
         </div>
       </section>

@@ -3,7 +3,22 @@ import { useState } from "react";
 import ClassesList from "../../assets/api/ClassesList";
 
 const Classes = () => {
-  const [selectedDay, setSelectedDay] = useState("Monday");
+  // Array For days of week
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  // To know current day
+  const currentDate = new Date();
+  const currentDay = daysOfWeek[currentDate.getDay()];
+
+  const [selectedDay, setSelectedDay] = useState(currentDay);
 
   const handleDayClick = (day) => {
     setSelectedDay(day);
@@ -11,6 +26,7 @@ const Classes = () => {
 
   return (
     <div className="classes-wrapper">
+      {/* Banner */}
       <section className="banner classes-banner">
         <div className="container center">
           <div className="banner-heading">
@@ -22,6 +38,7 @@ const Classes = () => {
       {/* Class Section */}
       <section className="class-timings center py-5 my-5">
         <div className="container center flex-col">
+          {/* Title */}
           <div className="title">
             <h4
               className="text-lg uppercase font-bold"
@@ -30,12 +47,15 @@ const Classes = () => {
               Classes Schedule
             </h4>
           </div>
+          {/* Heading */}
           <div className="heading text-4xl uppercase font-bold mb-4 p-1">
             Working Hours
           </div>
 
+          {/* Week Bar */}
           <nav className="weekbar rounded mb-5">
             <ul className="week-list center flex-wrap">
+              {/* Day List */}
               <li
                 className={`list-item mx-1 ${
                   selectedDay === "Monday" ? "active" : ""
@@ -95,19 +115,23 @@ const Classes = () => {
             </ul>
           </nav>
 
+          {/* Time Table */}
           {selectedDay && (
             <div className="time-table center flex-wrap">
+              {/* Class List */}
               {ClassesList.find((day) => day.day === selectedDay)?.classes.map(
                 (classInfo) => (
                   <div
                     className="class-col center flex-col"
                     key={classInfo.name}
                   >
+                    {/* Class Timings */}
                     <div className="class-timings">
                       <p className="text-white uppercase font-bold">
                         {classInfo.time}
                       </p>
                     </div>
+                    {/* Class Name */}
                     <div className="class-name">
                       <h3
                         className="font-bold uppercase text-2xl p-3"
@@ -116,6 +140,7 @@ const Classes = () => {
                         {classInfo.name}
                       </h3>
                     </div>
+                    {/* Class Instructor */}
                     <div className="class-instructor">
                       <p className="text-white uppercase">
                         {classInfo.instructor}

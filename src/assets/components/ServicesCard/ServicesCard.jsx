@@ -17,7 +17,7 @@ const ServicesCard = () => {
             <div className="col-icon">
               <img src={simg} alt="bodybuilding" />
             </div>
-            <div className="col-heading">
+            <div className="col-heading text-center">
               <h1>{sname}</h1>
             </div>
             <div className="col-text">
