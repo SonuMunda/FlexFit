@@ -9,88 +9,106 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="footer center flex-col">
       <div className=".container py-4">
+        {/* Container for the footer content */}
         <div className="footer-row center flex-wrap">
+          {/* Row container for the footer columns */}
           <div className="footer-col">
+            {/* First column */}
             <div className="heading">
               <h4>Get In Touch</h4>
             </div>
             <div className="ftr-list-cont">
-              <ul className="ftr-list  mt-2">
+              {/* Container for the contact information list */}
+              <ul className="ftr-list mt-2">
+                {/* List of contact information */}
                 <li className="ftr-list-item my-1">
                   <div className="ftr-icon">
-                    <FaPhoneAlt />
+                    <FaPhoneAlt /> {/* Phone icon from react-icons library */}
                   </div>
                   <p>+91 98000-80000</p>
                 </li>
                 <li className="ftr-list-item my-1">
                   <div className="ftr-icon">
-                    <FaEnvelope />
+                    <FaEnvelope />{" "}
+                    {/* Envelope icon from react-icons library */}
                   </div>
-                  <p>flexfitgym@email.com</p>
+                  <p>email@example.com</p>
                 </li>
                 <li className="ftr-list-item my-1">
                   <div className="ftr-icon">
-                    <FaMapMarkerAlt />
+                    <FaMapMarkerAlt />{" "}
+                    {/* Map marker icon from react-icons library */}
                   </div>
-                  <p>Bela Chawk ,Rupnagar, Punjab, India</p>
+                  <p>Bela Chawk, Rupnagar, Punjab, India</p>
                 </li>
               </ul>
             </div>
             <div className="social-handles flex">
+              {/* Container for social media handles */}
               <div className="handle">
                 <Link to="">
-                  <FaFacebook />
+                  <FaFacebook /> {/* Facebook icon from react-icons library */}
                 </Link>
               </div>
               <div className="handle">
                 <Link to="">
-                  <FaInstagram />
+                  <FaInstagram />{" "}
+                  {/* Instagram icon from react-icons library */}
                 </Link>
               </div>
               <div className="handle">
                 <Link to="">
-                  <FaTwitter />
+                  <FaTwitter /> {/* Twitter icon from react-icons library */}
                 </Link>
               </div>
               <div className="handle">
                 <Link to="">
-                  <FaLinkedin />
+                  <FaLinkedin /> {/* LinkedIn icon from react-icons library */}
                 </Link>
               </div>
             </div>
           </div>
           <div className="footer-col">
+            {/* Second column */}
             <div className="heading">
               <h4>Quick Links</h4>
             </div>
             <div className="ftr-list-cont">
+              {/* Container for quick links */}
               <ul className="ftr-list mt-2">
+                {/* List of quick links */}
                 <li className="ftr-list-item text-white my-1">
                   <Link to="/" className="ftr-links text-slate-200">
+                    {/* Link to home */}
                     Home
                   </Link>
                 </li>
                 <li className="ftr-list-item text-white my-1">
                   <Link to="/" className="ftr-links text-slate-200">
+                    {/* Link to about */}
                     About
                   </Link>
                 </li>
                 <li className="ftr-list-item text-white my-1">
                   <Link to="/" className="ftr-links text-slate-200">
+                    {/* Link to classes */}
                     Classes
                   </Link>
                 </li>
                 <li className="ftr-list-item text-white my-1">
                   <Link to="/" className="ftr-links text-slate-200">
+                    {/* Link to trainers */}
                     Trainers
                   </Link>
                 </li>
                 <li className="ftr-list-item text-white my-1">
                   <Link to="/" className="ftr-links text-slate-200">
+                    {/* Link to contact */}
                     Contact
                   </Link>
                 </li>
@@ -98,10 +116,12 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-col">
+            {/* Third column */}
             <div className="heading">
               <h4>Newsletter</h4>
             </div>
             <div className="ftr-content">
+              {/* Container for newsletter content */}
               <div className="title  mt-2">
                 <h4 className="text-white uppercase text-xl">
                   Subscribe our Newsletter
@@ -117,6 +137,7 @@ const Footer = () => {
               </div>
               <div className="news-ltr-form my-3">
                 <form action="">
+                  {/* Newsletter subscription form */}
                   <div className="ltr-form-group">
                     <input
                       type="text"
@@ -145,7 +166,10 @@ const Footer = () => {
         </div>
       </div>
       <div className="copy-rght w-full bg-zinc-950">
-        <p className="p-5 text-white text-center">&copy; flexfitgym.com | All Rights Reserved.</p>
+        {/* Container for copyright */}
+        <p className="p-5 text-white text-center">
+          &copy; flexfitgym.com | All Rights Reserved.
+        </p>
       </div>
     </footer>
   );

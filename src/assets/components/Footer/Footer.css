@@ -1,7 +1,9 @@
+/* Footer Styles */
 footer {
   background-color: rgb(24 24 27);
 }
 
+/* Footer Column */
 .footer-col {
   width: 360px;
   margin: 1rem;
@@ -15,6 +17,7 @@ footer {
   margin-top: 1rem;
 }
 
+/* Footer List */
 .ftr-list .ftr-list-item {
   display: flex;
   align-items: center;
@@ -28,6 +31,8 @@ footer {
 .ftr-list .ftr-list-item p {
   color: rgb(216, 216, 216);
 }
+
+/* Social Handles */
 
 .social-handles .handle {
   font-size: 1.2rem;
@@ -48,9 +53,9 @@ footer {
   text-decoration: underline;
 }
 
-
-@media screen and (max-width:412px){
-  .footer-col{
+/* Footer Responsive Style */
+@media screen and (max-width: 412px) {
+  .footer-col {
     margin: 1rem 0;
     padding: 0 1rem;
   }

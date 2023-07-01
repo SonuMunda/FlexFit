@@ -2,11 +2,16 @@ import "./ServicesCard.css";
 import { Link } from "react-router-dom";
 import ServicesList from "../../api/ServicesList";
 
+// Creating the ServicesCard component
 const ServicesCard = () => {
   return (
     <div className="services-row center flex-wrap my-3">
+      {/* Mapping over the ServicesList array */}
       {ServicesList.map((service) => {
+        // Extracting data from each service object
         const { sid, simg, sname, sdesc, slink } = service;
+
+        // Rendering the individual service card
         return (
           <div className="services-col around flex-col" key={sid}>
             <div className="col-icon">

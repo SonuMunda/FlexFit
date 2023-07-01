@@ -7,20 +7,28 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const HomeCarousel = () => {
   return (
+    //React Carousel
     <Carousel autoPlay infiniteLoop>
+      {/*Slide 1*/}
       <div className="slide-1">
         <img src={carousel_img_1} />
         <div className="slide-content">
           <h3 className="text-2xl font-bold text-white">Best Gym Center</h3>
           <p className=" font-black text-white">
-            Power Your Potential with Flex Fit 
+            Power Your Potential with Flex Fit
           </p>
           <div className="button-row mt-2">
-            <button className="carousel-btn rounded text-white orng-btn">Join us</button>
-            <button className="carousel-btn rounded bg-white">Contact us</button>
+            <button className="carousel-btn rounded text-white orng-btn">
+              Join us
+            </button>
+            <button className="carousel-btn rounded bg-white">
+              Contact us
+            </button>
           </div>
         </div>
       </div>
+
+      {/*Slide 2*/}
       <div className="slide-2">
         <img src={carousel_img_2} />
         <div className="slide-content">
@@ -29,11 +37,17 @@ const HomeCarousel = () => {
             Achieve Your Best with Flex Fit
           </p>
           <div className="button-row mt-2">
-            <button className="carousel-btn rounded text-white orng-btn">Join us</button>
-            <button className="carousel-btn rounded bg-white">Contact us</button>
+            <button className="carousel-btn rounded text-white orng-btn">
+              Join us
+            </button>
+            <button className="carousel-btn rounded bg-white">
+              Contact us
+            </button>
           </div>
         </div>
       </div>
+
+      {/*Slide 3*/}
       <div className="slide-3">
         <img src={carousel_img_3} />
         <div className="slide-content">
@@ -42,8 +56,12 @@ const HomeCarousel = () => {
             Empower Yourself with Flex Fit
           </p>
           <div className="button-row mt-2">
-            <button className="carousel-btn rounded text-white orng-btn">Join us</button>
-            <button className="carousel-btn rounded bg-white">Contact us</button>
+            <button className="carousel-btn rounded text-white orng-btn">
+              Join us
+            </button>
+            <button className="carousel-btn rounded bg-white">
+              Contact us
+            </button>
           </div>
         </div>
       </div>
