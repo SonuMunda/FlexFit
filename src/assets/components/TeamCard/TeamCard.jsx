@@ -1,4 +1,3 @@
-// Importing necessary dependencies and files
 import "./TeamCard.css";
 import TeamList from "../../api/TeamList";
 import { Link } from "react-router-dom";

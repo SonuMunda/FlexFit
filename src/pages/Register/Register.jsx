@@ -4,6 +4,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import "./Register.css";
 
 const Register = () => {
+  // State Management for user data
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -12,6 +13,7 @@ const Register = () => {
     plan: "",
   });
 
+   // State Management for Error
   const [errorMessage, setErrorMessage] = useState({
     nameError: "",
     emailError: "",
@@ -32,6 +34,7 @@ const Register = () => {
     }));
   };
 
+  //handle Form Submit
   const handleSubmit = (event) => {
     event.preventDefault();
     const { name, email, phone, gender, plan } = userData;
@@ -118,7 +121,7 @@ const Register = () => {
       }));
     }
 
-    // Gender validation
+    // Plan validation
     if (plan === "") {
       setErrorMessage((prevErrorMessage) => ({
         ...prevErrorMessage,
@@ -147,11 +150,16 @@ const Register = () => {
 
   return (
     <div className="register-form-wrapper">
+    {/*Main Section*/}
       <section className="registration-form-section center">
         <div className="container">
+
+         {/*Side Image*/}
           <div className="form-side-image">
             <img src={form_bg} alt="" />
           </div>
+
+           {/*Registration Form*/}
           <div className="registration-form-container">
             <div className="form-title mt-5" style={{ color: "orangered" }}>
               <h4 className="text-2xl font-bold text-center pt-4">

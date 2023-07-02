@@ -11,6 +11,10 @@ import {
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <footer className="footer center flex-col">
       <div className=".container py-4">
@@ -34,7 +38,7 @@ const Footer = () => {
                 </li>
                 <li className="ftr-list-item my-1">
                   <div className="ftr-icon">
-                    <FaEnvelope />{" "}
+                    <FaEnvelope />
                     {/* Envelope icon from react-icons library */}
                   </div>
                   <p>email@example.com</p>
@@ -51,23 +55,23 @@ const Footer = () => {
             <div className="social-handles flex">
               {/* Container for social media handles */}
               <div className="handle">
-                <Link to="">
+                <Link to="https://www.facebook.com" target="_blank">
                   <FaFacebook /> {/* Facebook icon from react-icons library */}
                 </Link>
               </div>
               <div className="handle">
-                <Link to="">
-                  <FaInstagram />{" "}
+                <Link to="https://www.instagram.com" target="_blank">
+                  <FaInstagram />
                   {/* Instagram icon from react-icons library */}
                 </Link>
               </div>
               <div className="handle">
-                <Link to="">
+                <Link to="https://www.twitter.com" target="_blank">
                   <FaTwitter /> {/* Twitter icon from react-icons library */}
                 </Link>
               </div>
               <div className="handle">
-                <Link to="">
+                <Link to="https://www.linkedin.com" target="_blank">
                   <FaLinkedin /> {/* LinkedIn icon from react-icons library */}
                 </Link>
               </div>
@@ -83,31 +87,31 @@ const Footer = () => {
               <ul className="ftr-list mt-2">
                 {/* List of quick links */}
                 <li className="ftr-list-item text-white my-1">
-                  <Link to="/" className="ftr-links text-slate-200">
+                  <Link to="/" className="ftr-links text-slate-200" onClick={scrollToTop}>
                     {/* Link to home */}
                     Home
                   </Link>
                 </li>
                 <li className="ftr-list-item text-white my-1">
-                  <Link to="/" className="ftr-links text-slate-200">
+                  <Link to="/about" className="ftr-links text-slate-200" onClick={scrollToTop}>
                     {/* Link to about */}
                     About
                   </Link>
                 </li>
                 <li className="ftr-list-item text-white my-1">
-                  <Link to="/" className="ftr-links text-slate-200">
+                  <Link to="/classes" className="ftr-links text-slate-200" onClick={scrollToTop}>
                     {/* Link to classes */}
                     Classes
                   </Link>
                 </li>
                 <li className="ftr-list-item text-white my-1">
-                  <Link to="/" className="ftr-links text-slate-200">
+                  <Link to="/trainers" className="ftr-links text-slate-200" onClick={scrollToTop}>
                     {/* Link to trainers */}
                     Trainers
                   </Link>
                 </li>
                 <li className="ftr-list-item text-white my-1">
-                  <Link to="/" className="ftr-links text-slate-200">
+                  <Link to="/contact" className="ftr-links text-slate-200" onClick={scrollToTop}>
                     {/* Link to contact */}
                     Contact
                   </Link>
@@ -140,13 +144,14 @@ const Footer = () => {
                   {/* Newsletter subscription form */}
                   <div className="ltr-form-group">
                     <input
-                      type="text"
+                      type="email"
                       style={{
                         width: "200px",
                         borderRadius: "6px 0px 0px 6px",
                       }}
                       placeholder="Enter Email"
                       className="ps-4"
+                      required
                     />
                     <input
                       type="submit"
