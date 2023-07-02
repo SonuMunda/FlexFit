@@ -119,6 +119,9 @@
   .form-side-image {
     display: none;
   }
+  .registration-form-section .container .registration-form-container {
+    border-radius: 0;
+  }
 }
 
 @media screen and (max-width: 574px) {
