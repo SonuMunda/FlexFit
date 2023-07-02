@@ -1,46 +1,69 @@
-.registration-form-section .registration-form-container {
+.registration-form-section .container {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
 
+.registration-form-section .container .form-side-image {
+  height: 100%;
+  position: relative;
+}
+
+.registration-form-section .container .form-side-image img {
+  position: relative;
+  width: 100%;
+}
+
+.registration-form-section .container .registration-form-container {
+  position: relative;
   background-color: rgb(24 24 27);
-  margin: 120px 10px;
-  padding: 12px;
 }
 
 #register-form {
-  width: 420px;
+  width: 100%;
+  padding: 1rem;
 }
 
 #register-form .form-group {
-  margin: 10px;
+  padding-bottom: 18px;
+  position: relative;
+  margin: 10px 5px;
 }
 
 #register-form .form-group label {
   color: white;
   text-transform: uppercase;
-
 }
 
 #register-form .form-group .form-input {
-  height: 42px;
+  height: 48px;
   width: 100%;
   padding: 14px;
   border: none;
   outline: none;
 }
 
-.gender-selector input[type="radio"] {
+#gender-control {
+  height: 42px;
+  width: 240px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+}
+
+.plan-input {
   appearance: none;
-  width: 16px;
-  height: 16px;
-  margin: 0 4px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   border: 2px solid #ccc;
 }
-.gender-selector input[type="radio"]:checked {
+.plan-input:checked {
   background-color: orangered;
   border-color: orangered;
 }
 
-#register-form .form-group #register-btn {
+#register-form .form-btn #register-btn {
   background-color: orangered;
   color: white;
   padding: 10px;
@@ -49,14 +72,27 @@
   cursor: pointer;
 }
 
-.error-message{
-    color: rgb(255, 0, 0);
-    font-size: 12px;
-    position: relative;
+.plan-details p span {
+  color: orangered;
 }
 
-@media screen and (max-width: 480px) {
-  #register-form {
-    width: 95%;
+.error-message {
+  color: rgb(255, 0, 0);
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .form-side-image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  .reg-form-row,
+  .plan-selector {
+    flex-direction: column;
   }
 }

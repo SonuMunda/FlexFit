@@ -1,4 +1,5 @@
 import { useState } from "react";
+import form_bg from "/images/reg-form-bg.jpg";
 import "./Register.css";
 
 const Register = () => {
@@ -6,18 +7,16 @@ const Register = () => {
     name: "",
     email: "",
     phone: "",
-    password: "",
-    cpassword: "",
     gender: "",
+    plan: "",
   });
 
   const [errorMessage, setErrorMessage] = useState({
     nameError: "",
     emailError: "",
     phoneError: "",
-    passwordError: "",
-    cpasswordError: "",
     genderError: "",
+    planError: "",
   });
 
   // Handle Change / handle Input  Function
@@ -32,7 +31,7 @@ const Register = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const { name, email, phone, password, cpassword, gender } = userData;
+    const { name, email, phone, gender, plan } = userData;
 
     let hasError = false;
 
@@ -102,40 +101,6 @@ const Register = () => {
       }));
     }
 
-    // Password validation
-    if (password.trim() === "") {
-      setErrorMessage((prevErrorMessage) => ({
-        ...prevErrorMessage,
-        passwordError: "Password is required",
-      }));
-      hasError = true;
-    } else {
-      setErrorMessage((prevErrorMessage) => ({
-        ...prevErrorMessage,
-        passwordError: "",
-      }));
-    }
-
-    // Confirm password validation
-    if (cpassword.trim() === "") {
-      setErrorMessage((prevErrorMessage) => ({
-        ...prevErrorMessage,
-        cpasswordError: "Confirm password is required",
-      }));
-      hasError = true;
-    } else if (cpassword !== password) {
-      setErrorMessage((prevErrorMessage) => ({
-        ...prevErrorMessage,
-        cpasswordError: "Passwords do not match",
-      }));
-      hasError = true;
-    } else {
-      setErrorMessage((prevErrorMessage) => ({
-        ...prevErrorMessage,
-        cpasswordError: "",
-      }));
-    }
-
     // Gender validation
     if (gender === "") {
       setErrorMessage((prevErrorMessage) => ({
@@ -150,15 +115,28 @@ const Register = () => {
       }));
     }
 
+    // Gender validation
+    if (plan === "") {
+      setErrorMessage((prevErrorMessage) => ({
+        ...prevErrorMessage,
+        planError: "Choose a plan",
+      }));
+      hasError = true;
+    } else {
+      setErrorMessage((prevErrorMessage) => ({
+        ...prevErrorMessage,
+        planError: "",
+      }));
+    }
+
     if (!hasError) {
       console.log(userData);
       setUserData({
         name: "",
         email: "",
         phone: "",
-        password: "",
-        cpassword: "",
         gender: "",
+        plan: "",
       });
     }
   };
@@ -166,115 +144,150 @@ const Register = () => {
   return (
     <div className="register-form-wrapper">
       <section className="registration-form-section center">
-        <div className="registration-form-container center flex-col">
-          <div className="form-title" style={{ color: "orangered" }}>
-            <h4 className="text-2xl uppercase p-2 font-bold">Join Us</h4>
+        <div className="container">
+          <div className="form-side-image">
+            <img src={form_bg} alt="" />
           </div>
-          <form action="" onSubmit={handleSubmit} id="register-form">
-            <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                className="form-input"
-                placeholder="Enter name"
-                onChange={handleChange}
-                value={userData.name}
-              />
-              <span className="error-message">{errorMessage.nameError}</span>
+          <div className="registration-form-container">
+            <div className="form-title mt-5" style={{ color: "orangered" }}>
+              <h4 className="text-3xl font-bold text-center pt-4">
+                Register To Become A Member
+              </h4>
             </div>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                className="form-input"
-                placeholder="Enter email"
-                onChange={handleChange}
-                value={userData.email}
-              />
-              <span className="error-message">{errorMessage.emailError}</span>
+            <div className="form-text mt-2">
+              <p className="text-white text-center">
+                We need your details to complete Registration
+              </p>
             </div>
-            <div className="form-group">
-              <label htmlFor="phone">Phone</label>
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                className="form-input"
-                placeholder="Enter phone"
-                onChange={handleChange}
-                value={userData.phone}
-              />
-              <span className="error-message">{errorMessage.phoneError}</span>
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                className="form-input"
-                placeholder="Enter password"
-                onChange={handleChange}
-                value={userData.password}
-              />
-              <span className="error-message">
-                {errorMessage.passwordError}
-              </span>
-            </div>
-            <div className="form-group">
-              <label htmlFor="cpassword">Confirm Password</label>
-              <input
-                type="password"
-                name="cpassword"
-                id="cpassword"
-                className="form-input"
-                placeholder="Confirm password"
-                onChange={handleChange}
-                value={userData.cpassword}
-              />
-              <span className="error-message">
-                {errorMessage.cpasswordError}
-              </span>
-            </div>
-            <div className="form-group around flex-wrap px-1">
-              <label>Choose Gender</label>
-              <div className="gender-selector center">
-                <div className="center">
+            <form action="" onSubmit={handleSubmit} id="register-form">
+              <div className="form-group">
+                <label htmlFor="name">Full Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  className="form-input"
+                  placeholder="Enter name"
+                  onChange={handleChange}
+                  value={userData.name}
+                />
+                <span className="error-message"> {errorMessage.nameError}</span>
+              </div>
+              <div className="reg-form-row flex">
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
                   <input
-                    type="radio"
-                    name="gender"
-                    id="male-selector"
+                    type="email"
+                    name="email"
+                    id="email"
+                    className="form-input"
+                    placeholder="Enter email"
                     onChange={handleChange}
-                    checked={userData.gender === "male"}
-                    value="male"
+                    value={userData.email}
                   />
-                  <label htmlFor="male-selector">Male</label>
+                  <span className="error-message">
+                    {errorMessage.emailError}
+                  </span>
                 </div>
-
-                <div className="px-4 mx-3 center">
+                <div className="form-group">
+                  <label htmlFor="phone">Phone</label>
                   <input
-                    type="radio"
-                    name="gender"
-                    id="female-selector"
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    className="form-input"
+                    placeholder="Enter phone"
                     onChange={handleChange}
-                    checked={userData.gender === "female"}
-                    value="female"
+                    value={userData.phone}
                   />
-                  <label htmlFor="female-selector">Female</label>
+                  <span className="error-message">
+                    {errorMessage.phoneError}
+                  </span>
                 </div>
               </div>
-            </div>
-            <span className="error-message ms-3">
-              {errorMessage.genderError}
-            </span>
-            <div className="form-group">
-              <input type="submit" id="register-btn" value="Register Me" />
-            </div>
-          </form>
+              <div className="form-group flex flex-col">
+                <label>Choose Gender</label>
+                <select
+                  name="gender"
+                  id="gender-control"
+                  value={userData.gender}
+                  onChange={handleChange}
+                >
+                  <option value="">Select</option>
+                  <option value={"Male"}>Male</option>
+                  <option value={"Female"}>Female</option>
+                </select>
+                <span className="error-message">
+                  {errorMessage.genderError}
+                </span>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="plan-selector">Choose a plan</label>
+                <div className="plan-selector flex">
+                  <div className="flex items-center p-2 m-1">
+                    <input
+                      type="radio"
+                      name="plan"
+                      id="plan-1"
+                      onChange={handleChange}
+                      value={"Basic"}
+                      className="plan-input"
+                    />
+                    <div className="plan-details ms-2">
+                      <h6 className="text-bold text-sm text-white uppercase">
+                        Basic
+                      </h6>
+                      <p className="text-xs text-white">
+                        <span>&#8377;600</span> per month
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center p-2 m-1">
+                    <input
+                      type="radio"
+                      name="plan"
+                      id="plan-2"
+                      onChange={handleChange}
+                      value={"Premium"}
+                      className="plan-input"
+                    />
+                    <div className="plan-details ms-2">
+                      <h6 className="text-bold text-sm text-white uppercase">
+                        Premium
+                      </h6>
+                      <p className="text-xs text-white">
+                        <span>&#8377;800</span> per month
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center p-2 m-1">
+                    <input
+                      type="radio"
+                      name="plan"
+                      id="plan-3"
+                      onChange={handleChange}
+                      value={"Gold"}
+                      className="plan-input"
+                    />
+                    <div className="plan-details ms-2">
+                      <h6 className="text-bold text-sm text-white uppercase">
+                        Gold
+                      </h6>
+                      <p className="text-xs text-white">
+                        <span>&#8377;1200</span> per month
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <span className="error-message">{errorMessage.planError}</span>
+              </div>
+
+              <div className="form-btn mx-4 mt-3">
+                <input type="submit" id="register-btn" value="Register Me" />
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </div>
