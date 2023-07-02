@@ -112,6 +112,9 @@
   scale: 0;
   z-index: 999;
 }
+.msg-active{
+  scale: 1;
+}
 
 /* Styling for success message icon */
 .success-message .icon {

@@ -143,7 +143,6 @@ const Register = () => {
         email: "",
         phone: "",
         gender: "",
-        plan: "",
       });
     }
   };
