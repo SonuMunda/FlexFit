@@ -177,7 +177,7 @@ const Home = (props) => {
         </p>
 
         <div className="contact-btn-container center mt-3">
-          <Link>
+          <Link to="/contact">
             <button
               className="px-8 py-4 text-white rounded"
               style={{ backgroundColor: "orangered" }}

@@ -1,7 +1,35 @@
 import "./Contact.css";
+import { useState } from "react";
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Perform further actions or submit the form data
+    console.log(formData);
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    });
+
+    alert("Message Send Successfully");
+  };
   return (
     <div className="contact-wrapper">
       {/* Contact banner */}
@@ -86,13 +114,19 @@ const Contact = () => {
                   </h3>
                 </div>
                 {/* Contact form */}
-                <form action="" id="message-form">
+                <form action="" id="message-form" onSubmit={handleSubmit}>
                   <div className="form-group">
                     <input
                       type="text"
                       name="name"
-                      placeholder="Enter Name"
+                      placeholder="John Wilson"
                       className="input-controls"
+                      value={formData.name}
+                      onChange={handleChange}
+                      minLength={3}
+                      maxLength={25}
+                      pattern="[A-Za-z\s]+"
+                      required
                     />
                   </div>
                   <div className="form-row center">
@@ -100,38 +134,52 @@ const Contact = () => {
                       <input
                         type="email"
                         name="email"
-                        placeholder="Enter Email"
+                        placeholder="john@email.com"
                         className="input-controls"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="form-group">
                       <input
                         type="tel"
                         name="phone"
-                        placeholder="Enter Phone"
+                        placeholder="9800099989"
                         className="input-controls"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        pattern="[0-9]{10}"
+                        required
                       />
                     </div>
                   </div>
-                  {/* Subject */}
                   <div className="form-group">
                     <input
                       type="text"
                       name="subject"
                       placeholder="Subject"
                       className="input-controls"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      minLength={4}
+                      maxLength={24}
+                      required
                     />
                   </div>
-                  {/* Message */}
                   <div className="form-group">
                     <textarea
-                      name="message-box"
+                      name="message"
                       placeholder="Message"
                       style={{ height: "100px" }}
                       className="input-controls"
+                      value={formData.message}
+                      onChange={handleChange}
+                      minLength={6}
+                      maxLength={250}
+                      required
                     ></textarea>
                   </div>
-                  {/* Submit button */}
                   <div className="form-group center">
                     <input type="submit" value="Send Message" id="send-btn" />
                   </div>

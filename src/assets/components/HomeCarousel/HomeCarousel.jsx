@@ -1,4 +1,5 @@
 import "./HomeCarousel.css";
+import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import carousel_img_1 from "./images/carousel-image-1.jpg";
 import carousel_img_2 from "./images/carousel-image-2.jpg";
@@ -19,10 +20,10 @@ const HomeCarousel = () => {
           </p>
           <div className="button-row mt-2">
             <button className="carousel-btn rounded text-white orng-btn">
-              Join us
+             <Link to="/register"> Join us</Link>
             </button>
             <button className="carousel-btn rounded bg-white">
-              Contact us
+              <Link to="/contact">Contact us</Link>
             </button>
           </div>
         </div>
@@ -37,13 +38,13 @@ const HomeCarousel = () => {
             Achieve Your Best with Flex Fit
           </p>
           <div className="button-row mt-2">
-            <button className="carousel-btn rounded text-white orng-btn">
-              Join us
-            </button>
-            <button className="carousel-btn rounded bg-white">
-              Contact us
-            </button>
-          </div>
+          <button className="carousel-btn rounded text-white orng-btn">
+           <Link to="/register"> Join us</Link>
+          </button>
+          <button className="carousel-btn rounded bg-white">
+            <Link to="/contact">Contact us</Link>
+          </button>
+        </div>
         </div>
       </div>
 
@@ -56,13 +57,13 @@ const HomeCarousel = () => {
             Empower Yourself with Flex Fit
           </p>
           <div className="button-row mt-2">
-            <button className="carousel-btn rounded text-white orng-btn">
-              Join us
-            </button>
-            <button className="carousel-btn rounded bg-white">
-              Contact us
-            </button>
-          </div>
+          <button className="carousel-btn rounded text-white orng-btn">
+           <Link to="/register"> Join us</Link>
+          </button>
+          <button className="carousel-btn rounded bg-white">
+            <Link to="/contact">Contact us</Link>
+          </button>
+        </div>
         </div>
       </div>
     </Carousel>

@@ -12,11 +12,13 @@
 .registration-form-section .container .form-side-image img {
   position: relative;
   width: 100%;
+  border-radius: 8px 0px 0px 8px;
 }
 
 .registration-form-section .container .registration-form-container {
   position: relative;
   background-color: rgb(24 24 27);
+  border-radius: 0px 8px 8px 0px;
 }
 
 #register-form {
@@ -32,7 +34,7 @@
 
 #register-form .form-group label {
   color: white;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 #register-form .form-group .form-input {
@@ -82,6 +84,35 @@
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+.success-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(24, 26, 27);
+  transition: all 0.4s ease-in-out;
+  scale: 0;
+  z-index: 999;
+}
+
+.msg-active {
+  scale: 1;
+}
+
+.success-message .icon {
+  color: orangered;
+  font-size: 4rem;
+  padding: 0.5rem;
+}
+
+.success-message .close-btn button {
+  margin-top: 10px;
+  background-color: orangered;
+  padding: 10px 20px;
+  color: white;
 }
 
 @media screen and (max-width: 1280px) {

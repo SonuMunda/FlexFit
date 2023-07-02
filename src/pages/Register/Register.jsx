@@ -1,5 +1,6 @@
 import { useState } from "react";
 import form_bg from "/images/reg-form-bg.jpg";
+import { FaCheckCircle } from "react-icons/fa";
 import "./Register.css";
 
 const Register = () => {
@@ -18,6 +19,8 @@ const Register = () => {
     genderError: "",
     planError: "",
   });
+
+  const [messageActive, setMessageActive] = useState(false);
 
   // Handle Change / handle Input  Function
 
@@ -131,6 +134,7 @@ const Register = () => {
 
     if (!hasError) {
       console.log(userData);
+      setMessageActive(true);
       setUserData({
         name: "",
         email: "",
@@ -150,8 +154,8 @@ const Register = () => {
           </div>
           <div className="registration-form-container">
             <div className="form-title mt-5" style={{ color: "orangered" }}>
-              <h4 className="text-3xl font-bold text-center pt-4">
-                Register To Become A Member
+              <h4 className="text-2xl font-bold text-center pt-4">
+                Register to Become a Member
               </h4>
             </div>
             <div className="form-text mt-2">
@@ -231,7 +235,7 @@ const Register = () => {
                       name="plan"
                       id="plan-1"
                       onChange={handleChange}
-                      value={"Basic"}
+                      value="Basic"
                       className="plan-input"
                     />
                     <div className="plan-details ms-2">
@@ -249,7 +253,7 @@ const Register = () => {
                       name="plan"
                       id="plan-2"
                       onChange={handleChange}
-                      value={"Premium"}
+                      value="Premium"
                       className="plan-input"
                     />
                     <div className="plan-details ms-2">
@@ -267,7 +271,7 @@ const Register = () => {
                       name="plan"
                       id="plan-3"
                       onChange={handleChange}
-                      value={"Gold"}
+                      value="Gold"
                       className="plan-input"
                     />
                     <div className="plan-details ms-2">
@@ -287,6 +291,32 @@ const Register = () => {
                 <input type="submit" id="register-btn" value="Register Me" />
               </div>
             </form>
+          </div>
+        </div>
+      </section>
+      {/*Success Message Prompt*/}
+      <section
+        className={`success-message center ${
+          messageActive ? "msg-active" : ""
+        }`}
+      >
+        <div className="container center flex-col p-4">
+          <div className="icon">
+            <FaCheckCircle />
+          </div>
+          <div className="text">
+            <p className="msg text-center text-white  text-2xl">
+              Congratulations You are Now A Member of Flex Fit Gym Family
+            </p>
+          </div>
+          <div className="close-btn">
+            <button
+              onClick={() => {
+                setMessageActive(false);
+              }}
+            >
+              Close
+            </button>
           </div>
         </div>
       </section>
